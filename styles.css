@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('fogoCasa.jpg') no-repeat center center/cover; /* Aqui é para a imagem do fundo nao ficar repetindo e ficar centralizada*/
+    color: #fff;
+}
+
+header {
+    background: url('centralizadoFogo.gif') no-repeat center center/cover ;/* Aqui é para a imagem do fundo nao ficar repetindo e ficar centralizada*/
+    height: 80vh;
+    position: relative;
+}
+
+header .overlay {
+    font-size: 1.2rem;
+    height: 100%;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+
+
+/*Estilizando e centralizando os links do header*/
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-top: -230px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: under  1line;
+}
+
+
+/*   */
+
+main {
+    padding: 20px;
+}
+
+section#introducao {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.imagens-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.img-destaque {
+    width: 45%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.img-destaque:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*Apliquei responsividade com o media query, usando larguras máximas para os dispositivos moveis*/
+@media (max-width: 300px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav ul li {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 30vh;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-top: 160px;
+    }
+
+    @media (max-width: 600px) {
+        nav ul li {
+            margin-top: 160px;
+        }
+    }
+
+    @media (max-width: 510px) {
+        nav ul li {
+            margin-top: 100px;
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 440px) {
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            margin-top: 150px;
+        }
+
+        nav ul li {
+            margin-top: 0;
+            font-size: 1.0rem;
+        }
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .imagens-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .img-destaque {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+   
+}
+
